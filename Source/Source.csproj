@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+	<PropertyGroup>
+		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+		<ProjectGuid>{bc9d47e4-823c-45aa-af25-f052eafee17f}</ProjectGuid>
+		<OutputType>Library</OutputType>
+		<AppDesignerFolder>Properties</AppDesignerFolder>
+		<RootNamespace>VARIABLE_NAMESPACE</RootNamespace>
+		<AssemblyName>VARIABLE_ASSEMBLY_NAME</AssemblyName>
+		<TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+		<FileAlignment>512</FileAlignment>
+		<OutputPath>..\Common\Assemblies\</OutputPath>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+		<Prefer32Bit>false</Prefer32Bit>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>portable</DebugType>
+		<Optimize>false</Optimize>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<DebugSymbols>false</DebugSymbols>
+		<DebugType>none</DebugType>
+		<Optimize>true</Optimize>
+	</PropertyGroup>
+	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+	<Target Name="BeforeBuild">
+		<ItemGroup>
+		 <AssemblyAttributes Include="AssemblyTitle">
+				<_Parameter1>VARIABLE_NAME</_Parameter1>
+		 </AssemblyAttributes>
+		 <AssemblyAttributes Include="AssemblyDescription">
+				<_Parameter1>VARIABLE_DESCRIPTION</_Parameter1>
+		 </AssemblyAttributes>  
+		 <AssemblyAttributes Include="AssemblyCompany">
+				<_Parameter1>VARIABLE_AUTHOR</_Parameter1>
+		 </AssemblyAttributes>
+		 <AssemblyAttributes Include="AssemblyProduct">
+				<_Parameter1>VARIABLE_NAME</_Parameter1>
+		 </AssemblyAttributes>
+		 <AssemblyAttributes Include="AssemblyCopyright">
+				<_Parameter1>Copyright © VARIABLE_YEAR VARIABLE_AUTHOR</_Parameter1>
+		 </AssemblyAttributes>
+		 <AssemblyAttributes Include="AssemblyCulture">
+				<_Parameter1></_Parameter1>
+		 </AssemblyAttributes>
+		 <AssemblyAttributes Include="AssemblyConfiguration">
+				<_Parameter1>$(Configuration)|$(Platform)</_Parameter1>
+		 </AssemblyAttributes>
+		 <AssemblyAttributes Include="AssemblyVersion">
+				<_Parameter1>1.0.0.0</_Parameter1>
+		 </AssemblyAttributes>
+		 <AssemblyAttributes Include="AssemblyFileVersion">
+				<_Parameter1>1.0.0.0</_Parameter1>
+		 </AssemblyAttributes>
+		 <AssemblyAttributes Include="System.Runtime.InteropServices.Guid">
+				<_Parameter1>8ddcb5e9-86ba-49f1-9f4b-fe4a8f2a4567</_Parameter1>
+		 </AssemblyAttributes>
+		</ItemGroup>
+		<WriteCodeFragment Language="C#" OutputFile="Properties\AutoAssemblyInfo.cs" AssemblyAttributes="@(AssemblyAttributes)" />
+	</Target>
+	<ItemGroup>
+		<Reference Include="UnityEngine">
+			<HintPath>..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="System"/>
+		<Reference Include="System.Core"/>
+		<Reference Include="System.Xml.Linq"/>
+		<Reference Include="System.Data.DataSetExtensions"/>
+		<Reference Include="System.Data"/>
+		<Reference Include="System.Xml"/>
+		<Compile Include="Properties\AutoAssemblyInfo.cs"/>
+		<Compile Include="Properties\AssemblyInfo.cs"/>
+		<Compile Include="Mod.cs"/>
+	</ItemGroup>
+</Project>

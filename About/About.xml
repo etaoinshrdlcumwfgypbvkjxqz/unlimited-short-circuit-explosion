@@ -1,0 +1,13 @@
+<ModMetaData>
+	<name>VARIABLE_NAME</name>
+	<author>VARIABLE_AUTHOR</author>
+	<packageId>VARIABLE_NAMESPACE</packageId>
+	<supportedVersions>
+		<li>VARIABLE_SUPPORTED_VERSION</li>
+	</supportedVersions>
+	<description>VARIABLE_DESCRIPTION</description>
+	<url>VARIABLE_URL</url>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+	</loadAfter>
+</ModMetaData>

@@ -1,0 +1,36 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"command": "dotnet",
+	"type": "shell",
+	"args": [
+		"build",
+		"${cwd}\\Source\\Source.csproj",
+		// Ask dotnet build to generate full paths for file names.
+		"/property:GenerateFullPaths=true",
+		// Do not generate summary otherwise it leads to duplicate errors in Problems panel
+		"/consoleloggerparameters:NoSummary",
+	],
+	"tasks": [
+		{
+			"label": "build (Debug|AnyCPU)",
+			"args": [
+				"--configuration", "Debug",
+				"/property:Platform=AnyCPU"
+			]
+		},
+		{
+			"label": "build (Release|AnyCPU)",
+			"args": [
+				"--configuration", "Release",
+				"/property:Platform=AnyCPU"
+			]
+		}
+	],
+	"group": "build",
+	"presentation": {
+		"reveal": "silent"
+	},
+	"problemMatcher": "$msCompile"
+}
