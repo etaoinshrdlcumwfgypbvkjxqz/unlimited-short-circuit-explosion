@@ -1,13 +1,13 @@
 using Verse;
 
-namespace VARIABLE_NAMESPACE {
+namespace Polyipseity.UnlimitedShortCircuitExplosion {
 	public class EarlyModStartup : Mod {
 		public EarlyModStartup(ModContentPack content) : base(content) {}
 	}
 
 	[StaticConstructorOnStartup]
 	public static class ModStartup {
-		public const string ID = nameof(VARIABLE_NAMESPACE);
+		public const string ID = nameof(Polyipseity.UnlimitedShortCircuitExplosion);
 
 		static ModStartup() {}
 	}

@@ -1,12 +1,12 @@
 <ModMetaData>
-	<name>VARIABLE_NAME</name>
-	<author>VARIABLE_AUTHOR</author>
-	<packageId>VARIABLE_NAMESPACE</packageId>
+	<name>Unlimited Short Circuit Explosion</name>
+	<author>polyipseity</author>
+	<packageId>Polyipseity.UnlimitedShortCircuitExplosion</packageId>
 	<supportedVersions>
-		<li>VARIABLE_SUPPORTED_VERSION</li>
+		<li>1.3</li>
 	</supportedVersions>
-	<description>VARIABLE_DESCRIPTION</description>
-	<url>VARIABLE_URL</url>
+	<description></description>
+	<url></url>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
 	</loadAfter>
