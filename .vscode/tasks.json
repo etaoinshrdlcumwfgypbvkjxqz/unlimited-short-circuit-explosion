@@ -16,16 +16,23 @@
 		{
 			"label": "build (Debug|AnyCPU)",
 			"args": [
-				"--configuration", "Debug",
+				"--configuration",
+				"Debug",
 				"/property:Platform=AnyCPU"
-			]
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
 		},
 		{
 			"label": "build (Release|AnyCPU)",
 			"args": [
-				"--configuration", "Release",
+				"--configuration",
+				"Release",
 				"/property:Platform=AnyCPU"
-			]
+			],
+			"group": "build"
 		}
 	],
 	"group": "build",
